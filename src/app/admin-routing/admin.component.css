@@ -1,0 +1,38 @@
+.img-user {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.admin-header-item {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.header-item-list {
+  position: relative;
+  margin-right: 10px;
+  line-height: 46px;
+}
+
+.user-info {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  flex: 1;
+  background-color: #ccc;
+  min-height: 130px;
+  line-height: 20px;
+  padding: 15px 20px;
+}
+
+.btn-logout::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  border-top: 1px solid red;
+}

@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+.list-table-content {
+  margin-top: 60px;
+}
+
+.btn-page {
+  position: relative;
+  left: 86.5%;
+  top: 10px;
+  cursor: pointer;
+}
+
+

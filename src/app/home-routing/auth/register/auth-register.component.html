@@ -1,0 +1,50 @@
+<div class="form-register">
+  <div class="form-container">
+<form [formGroup]="formGroup" class="example-form">
+  <mat-form-field class="example-full-width item-register">
+    <mat-label>Tên Đăng nhập</mat-label>
+    <input matInput formControlName="userName">
+    <!-- Display error message for 'userName' field -->
+    <mat-error *ngIf="userName?.invalid && userName?.touched">
+      Tên Đăng nhập không được bỏ trống.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width item-register">
+    <mat-label>Mật khẩu</mat-label>
+    <input matInput formControlName="password">
+    <!-- Display error message for 'password' field -->
+    <mat-error *ngIf="password?.invalid && password?.touched">
+      Mật khẩu không hợp lệ. Mật khẩu phải có ít nhất 8 ký tự, bao gồm ít nhất một chữ hoa, một chữ thường và một ký tự đặc biệt.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width item-register">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+    <!-- Display error message for 'email' field -->
+    <mat-error *ngIf="email?.invalid && email?.touched">
+      Email không hợp lệ.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width item-register">
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone">
+    <!-- Display error message for 'phone' field -->
+    <mat-error *ngIf="phone?.invalid && phone?.touched">
+      Phone không hợp lệ. Phone phải có ít nhất 9 ký tự và không quá 12 ký tự.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Display general error message for the entire form -->
+  <div *ngIf="checkErr" class="error-message">
+    {{ checkErr }}
+  </div>
+
+  <div class="btn-register">
+  <button (click)="regsiter()" [disabled]="formGroup.invalid" type="submit">Đăng Kí</button>
+</div>
+</form>
+</div>
+</div>

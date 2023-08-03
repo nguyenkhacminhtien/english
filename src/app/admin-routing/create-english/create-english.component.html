@@ -1,0 +1,24 @@
+<div class="container">
+  <div>
+<mat-form-field class="input">
+  <mat-label>wordLuck</mat-label>
+  <input [(ngModel)]="wordLuckValue" matInput>
+</mat-form-field>
+</div>
+<div>
+  <mat-form-field class="input">
+    <mat-label>grammar</mat-label>
+    <input [(ngModel)]="grammarValue" matInput>
+  </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="input">
+      <mat-label>translation</mat-label>
+      <input [(ngModel)]="translationValue" matInput>
+    </mat-form-field>
+    </div>
+<div class="example-button-row">
+  <button mat-button color="accent" (click)="saveData()">Save</button>
+</div>
+</div>
+

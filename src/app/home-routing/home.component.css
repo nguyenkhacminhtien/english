@@ -1,0 +1,12 @@
+.header-item-login {
+  list-style: none;
+  line-height: 46px;
+  background-color: #ee82ee;
+  padding: 0 16px;
+  border-radius: 2px;
+}
+
+.btn-link-login {
+  color: #fff;
+
+}

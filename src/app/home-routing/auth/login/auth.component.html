@@ -1,0 +1,30 @@
+<div class="form-login">
+  <div class="form-container">
+    <form [formGroup]="formGroup" class="example-form">
+      <mat-form-field class="example-full-width login-item">
+        <div>
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone">
+          <mat-error *ngIf="formGroup.get('phone')?.invalid && formGroup.get('phone')?.touched">
+            Số điện thoại không hợp lệ. Số điện thoại phải có ít nhất 9 ký tự.
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="example-full-width login-item">
+        <div>
+          <mat-label>Mật khẩu</mat-label>
+          <input matInput formControlName="password">
+          <mat-error *ngIf="formGroup.get('password')?.invalid && formGroup.get('password')?.touched">
+            Mật khẩu ít nhất 1 chữ thường, hoa, kí tự đặt biệt
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <div *ngIf="formGroup.invalid" class="error-message">
+        {{ checkErr }}
+      </div>
+      <div class="btn-login">
+        <button (click)="headlogin()" type="button">Đăng Nhập</button>
+      </div>
+    </form>
+  </div>
+</div>

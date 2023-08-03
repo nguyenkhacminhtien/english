@@ -1,0 +1,42 @@
+<div *ngIf="isLoggedIn" class="container">
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 list-table-content">
+  <div class="col-xl-3">
+  <ng-container matColumnDef="wordLuckValue">
+    <th mat-header-cell *matHeaderCellDef> wordLuckValue </th>
+    <td mat-cell *matCellDef="let user"> {{user.wordLunkValue}} </td>
+  </ng-container>
+ </div>
+  <!-- Name Column -->
+  <div class="col-xl-3">
+  <ng-container matColumnDef="grammarValue">
+    <th mat-header-cell *matHeaderCellDef> grammarValue </th>
+    <td mat-cell *matCellDef="let user"> {{user.grammarValue}} </td>
+  </ng-container>
+</div>
+  <!-- Weight Column -->
+  <div class="col-xl-3">
+  <ng-container matColumnDef="translationValue">
+    <th mat-header-cell *matHeaderCellDef> translationValue </th>
+    <td mat-cell *matCellDef="let user"> {{user.tranSlationValue}} </td>
+  </ng-container>
+</div>
+  <!-- Symbol Column -->
+  <div class="col-xl-3">
+  <ng-container matColumnDef="wordId">
+    <th mat-header-cell *matHeaderCellDef>act</th>
+    <td mat-cell *matCellDef="let user">
+      <button (click)="deleteEnglish(user.wordId)" mat-raised-button color="warn">Xóa</button>
+    </td>
+  </ng-container>
+</div>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
+</table>
+ <div class="btn-page">
+  <button (click)="onclickPage('previous')" class="material-icons btn-dispatch">chevron_left</button >
+  <button (click)="onclickPage('next')" class="material-icons">chevron_right</button>
+ </div>
+</div>
+
+
