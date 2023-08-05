@@ -1,5 +1,7 @@
 <div *ngIf="isLoggedIn" class="container">
-
+ <div class="link-createEnglish">
+  <a href="/admin/CreateEnglish">Thêm mới</a>
+ </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 list-table-content">
   <div class="col-xl-3">
   <ng-container matColumnDef="wordLuckValue">
@@ -34,9 +36,8 @@
   <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
 </table>
  <div class="btn-page">
-  <button (click)="onclickPage('previous')" class="material-icons btn-dispatch">chevron_left</button >
-  <button (click)="onclickPage('next')" class="material-icons">chevron_right</button>
+  <button (click)="onclickPage('previous')" class="material-icons btn-dispatch" [disabled]="isPreviousDisabled()">chevron_left</button >
+  <button (click)="onclickPage('next')" class="material-icons btn-dispatch" [disabled]="isNextDisabled()">chevron_right</button>
  </div>
 </div>
-
 

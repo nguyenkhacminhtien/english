@@ -1,0 +1,43 @@
+.mat-label-login {
+  display: block;
+  text-align: center;
+}
+.input-login {
+  margin-top: 20px
+}
+
+
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+.form-container {
+  min-width: 400px;
+  width: 450px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.login-item {
+  width: 100%;
+}
+
+.btn-login {
+  text-align: center;
+}
+.btn-login-item {
+  cursor: pointer;
+  background-color: blue;
+  color: #fff;
+  padding: 5px 16px;
+  border-radius: 4px;
+}
+
+.btn-login-item:hover {
+  background-color: #ccc;
+  opacity: 0.8;
+}

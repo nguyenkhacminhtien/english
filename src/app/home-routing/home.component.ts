@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../Service/httpApi-login/auth.service';
+import { AuthService } from '../Service/auth.service';
 import { HttpApiService } from '../Service/http-api.service';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit {
     this.isLoggedIn = this.authService.getIsLoggedIn();
  }
 
-   toggleUserInfo(event: Event) {
-    event.stopPropagation();
-    this.showUserInfo = !this.showUserInfo;
-    console.log("toggleUserInfo() is called!");
-  }
+  //  toggleUserInfo(event: Event) {
+  //   event.stopPropagation();
+  //   this.showUserInfo = !this.showUserInfo;
+  //   console.log("toggleUserInfo() is called!");
+  // }
 }
 

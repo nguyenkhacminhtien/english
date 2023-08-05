@@ -1,0 +1,34 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+exports.__esModule = true;
+exports.AdminComponent = void 0;
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var AdminComponent = /** @class */ (function () {
+    function AdminComponent(httpClear, authService, route, cookie) {
+        this.httpClear = httpClear;
+        this.authService = authService;
+        this.route = route;
+        this.cookie = cookie;
+        this.isLoggedIn = false;
+        this.Loggedsuccessfully = [];
+        this.showUserInfo = false;
+        this.userSelectControl = new forms_1.FormControl();
+    }
+    AdminComponent.prototype.ngOnInit = function () {
+    };
+    AdminComponent = __decorate([
+        core_1.Component({
+            selector: 'admin-root',
+            templateUrl: './admin.component.html',
+            styleUrls: ['./admin.component.css']
+        })
+    ], AdminComponent);
+    return AdminComponent;
+}());
+exports.AdminComponent = AdminComponent;

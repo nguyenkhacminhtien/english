@@ -7,15 +7,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { RouterModule } from '@angular/router';
 
-import { FromLuckEnglishComponent } from './from-luck-english/from-luck-english.component';
 import { CreateEnglishComponent } from './create-english/create-english.component';
 import { AdminComponent } from './admin.component';
+import { ProductComponent } from './product/product.component';
+import { FromLuckEnglishComponent } from './from-luck-english/from-luck-english.component';
 @NgModule({
   declarations: [
     FromLuckEnglishComponent,
     CreateEnglishComponent,
     AdminComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { AdminComponent } from './admin.component';
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
   ]
 })
 export class AdminModule { }

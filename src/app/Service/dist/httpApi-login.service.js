@@ -6,17 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.HttpApiService = void 0;
+exports.HttpApiLoginService = void 0;
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
-var HttpApiService = /** @class */ (function () {
-    function HttpApiService(httpClient, getCookie, tokenService) {
+var HttpApiLoginService = /** @class */ (function () {
+    function HttpApiLoginService(httpClient, cookie, tokenService) {
         this.httpClient = httpClient;
-        this.getCookie = getCookie;
+        this.cookie = cookie;
         this.tokenService = tokenService;
         this.REST_API_SERVER = 'http://localhost:3000';
     }
-    Object.defineProperty(HttpApiService.prototype, "httpOptions", {
+    Object.defineProperty(HttpApiLoginService.prototype, "httpOptions", {
         get: function () {
             var token = this.tokenService.getToken();
             return {
@@ -30,29 +30,21 @@ var HttpApiService = /** @class */ (function () {
         configurable: true
     });
     // post create English
-    HttpApiService.prototype.createEnglish = function (data) {
-        var url = this.REST_API_SERVER + "/create";
-        return this.httpClient.post(url, data, this.httpOptions);
+    HttpApiLoginService.prototype.postRegister = function (data) {
+        var url = this.REST_API_SERVER + "/register";
+        return this.httpClient.post(url, data);
     };
-    // get data english
-    HttpApiService.prototype.getDataEnglish = function (currentPage) {
-        var url = this.REST_API_SERVER + "/admin/English/" + currentPage;
-        return this.httpClient.get(url, this.httpOptions);
+    //  postLogin
+    HttpApiLoginService.prototype.postlogin = function (data) {
+        var url = this.REST_API_SERVER + "/login";
+        return this.httpClient.post(url, data);
     };
-    // delete English
-    HttpApiService.prototype.deletaEnglish = function (wordId) {
-        var url = this.REST_API_SERVER + "/deleteEnglish/" + wordId;
-        return this.httpClient["delete"](url, this.httpOptions);
-    };
-    HttpApiService.prototype.logged = function () {
-        var url = this.REST_API_SERVER + "/login/successfully";
-        return this.httpClient.get(url, this.httpOptions);
-    };
-    HttpApiService = __decorate([
+    HttpApiLoginService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
         })
-    ], HttpApiService);
-    return HttpApiService;
+    ], HttpApiLoginService);
+    return HttpApiLoginService;
 }());
-exports.HttpApiService = HttpApiService;
+exports.HttpApiLoginService = HttpApiLoginService;
+exports["default"] = HttpApiLoginService;

@@ -1,0 +1,13 @@
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+  <img class="img-user" *ngIf="userData?.imageUrl; else defaultImage" [src]="userData?.imageUrl" alt="Dropdown">
+  <ng-template #defaultImage>
+    <img class="img-user" src="https://sacbaongoc.net/wp-content/uploads/2022/06/300-anh-dai-dien-dep-cho-nu-che-mat-dep-ca-tinh-nhat-65.jpg" alt="Dropdown">
+  </ng-template>
+</a>
+<div class="dropdown-menu">
+  <a class="dropdown-item">{{userData?.userName}}</a>
+  <a class="dropdown-item" href="#">{{userData?.phone}}</a>
+  <a class="dropdown-item" href="#">{{userData?.email}}</a>
+  <div class="dropdown-divider"></div>
+  <button (click)="logout()" class="dropdown-item" href="#">Logout</button>
+</div>

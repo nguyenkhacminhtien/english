@@ -1,17 +1,2 @@
-<ul class="admin-header-item">
-  <li *ngIf="isLoggedIn"><a routerLink="/ListEnglish" routerLinkActive="active">ListEnglish</a></li>
+<router-outlet></router-outlet>
 
-  <li *ngIf="isLoggedIn" class="header-item-list" (click)="handleItemClick($event)">
-    <div>
-      <img class="img-user" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8x4x3XkUjPxf9TfFD6OpXEFqg_7S8hsZWfA&usqp=CAU" alt="">
-    </div>
-    <div *ngIf="showUserInfo" class="user-info">
-      <div *ngFor="let user of Loggedsuccessfully">
-        <p>{{ user.userName }}</p>
-        <p>{{ user.email }}</p>
-        <p>{{ user.phone }}</p>
-      </div>
-      <button *ngIf="isLoggedIn" class="btn-logout" mat-button (click)="logout()">Đăng xuất</button>
-    </div>
-  </li>
-</ul>

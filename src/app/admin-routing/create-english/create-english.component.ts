@@ -27,7 +27,7 @@ export class CreateEnglishComponent {
     };
       this.httpClear.createEnglish(data).subscribe(data => {
       console.log('data', data);
-      this.routes.navigate(['ListEnglish']);
+      this.routes.navigate(['admin/English']);
      })
    }
 }

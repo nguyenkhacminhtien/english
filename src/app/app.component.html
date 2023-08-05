@@ -1,35 +1,48 @@
-<!-- <div class="container">
-  <div id="header-nav">
-  <ul class="header-list-home">
-    <li>
-      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="home()">
-        <mat-icon>home</mat-icon>
-      </button>
-    </li>
-  </ul>
-  <ul class="header-list">
-    <li *ngIf="!isLoggedIn" class="header-item">
-      <a routerLink="/login" routerLinkActive="active">Login</a>
-    </li>
-      <li *ngIf="isLoggedIn" class="header-item header-item-list">
-        <mat-label (click)="toggleUserInfo($event)">
-          <img class="img-user" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8x4x3XkUjPxf9TfFD6OpXEFqg_7S8hsZWfA&usqp=CAU" alt="">
-        </mat-label>
-      </li>
-  </ul>
-    <div *ngIf="showUserInfo" class="user-info">
-      <div *ngFor="let user of Loggedsuccessfully">
-        <p>{{ user.userName }}</p>
-        <p>{{ user.email }}</p>
-        <p>{{ user.phone }}</p>
-      </div>
-      <button mat-button (click)="logout()">Đăng xuất</button>
-    </div>
-  </div> -->
-
-   <!-- <app-header></app-header> -->
-   <ul>
-    <li><a routerLink="/login">Login</a></li>
-
-   </ul>
+<nav class="navbar-expand navbar-dark bg-dark">
+  <div class="container">
+<ul class="nav justify-content-end">
+  <li *ngIf="isLoggedIn" class="nav-item">
+    <a class="nav-link active" routerLink="/admin/English">English</a>
+  </li>
+  <li *ngIf="isLoggedIn" class="nav-item">
+    <a class="nav-link" routerLink="/admin/Product">Product</a>
+  </li>
+  <li *ngIf="!isLoggedIn" class="nav-item">
+    <a class="nav-link disabled" routerLink="/login">Login</a>
+  </li>
+  <li *ngIf="isLoggedIn" class="nav-item dropdown">
+    <app-user-data></app-user-data>
+  </li>
+</ul>
+</div>
+</nav>
+ <div class="container">
   <router-outlet></router-outlet>
+ </div>
+
+ <!-- <footer class="bg-dark color-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Aubout</h2>
+        <p>
+          Tiếng Anh là một trong những ngôn ngữ quan trọng và phổ biến nhất trên thế giới.
+          Nó là ngôn ngữ chính thức của nhiều quốc gia và được sử dụng rộng rãi trong các lĩnh vực khác nhau như kinh tế,
+          khoa học, công nghệ, giáo dục, du lịch và truyền thông.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>thông tin Liên hệ</h2>
+        <a href="">liên hệ</a>
+        <a href="">chăm sóc khách hàng</a>
+      </div>
+      <h2>show.bs.collapse	</h2>
+      <a href="">show.bs.collapse	</a>
+      <a href="">show.bs.collapse	</a>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+
+ </footer> -->

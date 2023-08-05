@@ -16,9 +16,11 @@ var input_1 = require("@angular/material/input");
 var form_field_1 = require("@angular/material/form-field");
 var table_1 = require("@angular/material/table");
 var select_1 = require("@angular/material/select");
-var from_luck_english_component_1 = require("./from-luck-english/from-luck-english.component");
+var router_1 = require("@angular/router");
 var create_english_component_1 = require("./create-english/create-english.component");
 var admin_component_1 = require("./admin.component");
+var product_component_1 = require("./product/product.component");
+var from_luck_english_component_1 = require("./from-luck-english/from-luck-english.component");
 var AdminModule = /** @class */ (function () {
     function AdminModule() {
     }
@@ -28,6 +30,7 @@ var AdminModule = /** @class */ (function () {
                 from_luck_english_component_1.FromLuckEnglishComponent,
                 create_english_component_1.CreateEnglishComponent,
                 admin_component_1.AdminComponent,
+                product_component_1.ProductComponent,
             ],
             imports: [
                 common_1.CommonModule,
@@ -38,7 +41,8 @@ var AdminModule = /** @class */ (function () {
                 icon_1.MatIconModule,
                 http_1.HttpClientModule,
                 forms_1.FormsModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                router_1.RouterModule,
             ]
         })
     ], AdminModule);

@@ -17,8 +17,7 @@ var input_1 = require("@angular/material/input");
 var form_field_1 = require("@angular/material/form-field");
 var table_1 = require("@angular/material/table");
 var select_1 = require("@angular/material/select");
-var auth_component_1 = require("./auth/login/auth.component");
-var auth_register_component_1 = require("./auth/register/auth-register.component");
+var auth_register_component_1 = require("./register/auth-register.component");
 var HomeModule = /** @class */ (function () {
     function HomeModule() {
     }
@@ -26,7 +25,6 @@ var HomeModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 home_component_1.HomeComponent,
-                auth_component_1.AuthComponent,
                 auth_register_component_1.AuthRegiserComponent
             ],
             imports: [
